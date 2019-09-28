@@ -1,31 +1,35 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="container-fluid">
+    <div class="navbar">
+      <router-link to="/">Home</router-link>
     </div>
-    <router-view/>
+    <div class="container-fluid row p-0">
+      <aside class="col-2 p-0">
+        <comp-bar></comp-bar>
+      </aside>
+      <main class="col-6 offset-2 p-0">
+        <router-view/>
+
+      </main>
+    </div>
+
+
   </div>
 </template>
 
+<script>
+import CompBar from './views/CompBar'
+
+export default {
+  name: 'App',
+  components: {
+    CompBar,
+
+  }
+  
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
