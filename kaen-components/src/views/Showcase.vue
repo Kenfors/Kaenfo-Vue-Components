@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <h1 class="display-3">Showcase for {{Comp}}</h1>
     <component v-bind:is="Comp"></component>
   </div>
